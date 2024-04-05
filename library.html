@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Library Portal</title>
+<link rel="stylesheet" href="books.css"/>
+</head>
+<body>
+  <h1>Welcome To Library</h1>
+  
+  <table id="bookTable">
+    <thead style="font-size: 25px;">
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Category</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="bookTBody" style="color:rgb(109, 6, 177); font-size: 16px;"></tbody>
+  </table>
+
+
+  <form id="addForm">
+    <input type="text" id="title" placeholder="Enter Book Name" required>
+    <input type="text" id="author" placeholder="Enter Author Name" required>
+    <select id="categoryInput">
+      <option value="Fiction">Fiction</option>
+      <option value="Non-Fiction">Non-Fiction</option>
+      <option value="Science">Science</option>
+      <option value="Mystery">Mystery</option>
+    </select>
+    <button type="submit" onclick="openBookForm()">Add Book</button>
+  </form>
+  
+
+  
+<script src="books.js"></script>
+</body>
+</html>

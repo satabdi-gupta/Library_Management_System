@@ -1,0 +1,63 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+body{
+    min-height: 100vh;
+    background-image: url(books.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#bookTable {
+    margin: 20px auto;
+    padding: 10px;
+    color:rgb(28, 143, 179);
+    background-color:aliceblue;
+ }
+
+/* Heading styles */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color:antiquewhite;
+    color:rgb(5, 37, 216);
+    font-weight: bold;
+    font-size: 60px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    color:whitesmoke;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid;
+}
+
+#addForm{
+    display: flex;
+}
+input{
+    font-size: 17px;
+
+}
+.add{
+    background-color: rgb(66, 130, 167);
+    color: greenyellow;
+    font-size: 30px;
+}
+
+label{
+    background-color: powderblue;
+    font-size: 20px;
+}
+
+
