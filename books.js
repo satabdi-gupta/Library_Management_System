@@ -11,6 +11,7 @@ let books = JSON.parse(localStorage.getItem("books")) || [
 const bookTable = document.getElementById('bookTable');
 const bookTableBody = document.getElementById('bookTBody');
 const addForm = document.getElementById('addForm');
+const editForm =document.getElementById('editForm')
 
 // save to local storage
 function saveBooks() {
@@ -65,21 +66,26 @@ function openBookForm() {
 function editBook(id) {
   const book = books.find(b => b.id.toString() === id);
   if (book) {
-    addForm.onsubmit = function(event) {
+    editForm.onsubmit = function(event) {
       event.preventDefault();
-      book.title = document.getElementById('title').value;
-      book.author = document.getElementById('author').value;
-      book.category = document.getElementById('categoryInput').value;
+  
+      const eTitle = document.getElementById('editTitle').value;
+      const eAuthor = document.getElementById('editAuthor').value;
+      const eCategory = document.getElementById('editCategoryInput').value;
+     
+      book.title = eTitle;
+      book.author = eAuthor;
+      book.category = eCategory;
       saveBooks();
       populateBookTable('all');
       
-      document.getElementById('title').value = '';
-      document.getElementById('author').value = '';
-      document.getElementById('categoryInput').value = '';
+      document.getElementById('editTitle').value = '';
+      document.getElementById('editAuthor').value = '';
+      document.getElementById('editCategoryInput').value = '';
     };
-    document.getElementById('title').value = book.title;
-    document.getElementById('author').value = book.author;
-    document.getElementById('categoryInput').value = book.category;
+    document.getElementById('editTitle').value = book.title;
+    document.getElementById('editAuthor').value = book.author;
+    document.getElementById('editCategoryInput').value = book.category;
   } else {
     console.error('Book not found');
   }
@@ -100,4 +106,3 @@ document.getElementById('categoryInput').addEventListener('change', function() {
 
 // dropdown menu with all categories
 populateBookTable('all');
-
