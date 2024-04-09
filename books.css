@@ -45,6 +45,12 @@ th, td {
 #addForm{
     display: flex;
 }
+#editForm{
+    display: flex;
+    margin-top: 10px;
+
+}
+
 input{
     font-size: 17px;
 
