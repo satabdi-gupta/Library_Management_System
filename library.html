@@ -34,6 +34,18 @@
     <button type="submit" onclick="openBookForm()">Add Book</button>
   </form>
   
+    <form id="editForm">
+    <input type="text" id="editTitle" placeholder="Edit Book Name" required>
+    <input type="text" id="editAuthor" placeholder="Edit Author Name" required>
+    <select id="editCategoryInput">
+      <option value="Fiction">Fiction</option>
+      <option value="Non-Fiction">Non-Fiction</option>
+      <option value="Science">Science</option>
+      <option value="Mystery">Mystery</option>
+    </select>
+    <button type="submit" onclick="editBook()">Save Changes</button>
+  </form>
+
 
   
 <script src="books.js"></script>
